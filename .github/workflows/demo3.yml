@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: checkout the code
-       uses: actions/checkout@v2
-      -name: checkout the code
-       uses: actions/checkout@v2
-       with : 
-         -name: ${{env.ARTIFACT_NAME}}
-         path : .
+      uses: actions/checkout@v2
+      -name: upload the artifact
+      uses: actions/upload-artifact@v2
+      with : 
+        -name: ${{env.ARTIFACT_NAME}}
+        path : .
       
